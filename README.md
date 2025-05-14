@@ -6,8 +6,6 @@
 ### 🧠 Sobre mim
 
 - 🧩 Criador de bots inteligentes para Discord com economia, música, IA e muito mais.
-- 🌐 Desenvolvedor web com foco em PHP, HTML, CSS, e integração com APIs.
-- 🔒 Trabalho com sistemas de login, dashboards personalizados e segurança via JSON.
 - 🧪 Curioso por IA, integração de modelos como GPT e DeepSeek no front e back-end.
 
 ---
