@@ -1,5 +1,5 @@
 <h1 align="center">👾 Rafaelneon</h1>
-<p align="center">Desenvolvedor apaixonado por automações, bots, sistemas econômicos e web 💻</p>
+<p align="center">Desenvolvedor apaixonado por automações, bots, sistemas e econômicos 💻</p>
 
 ---
 
@@ -30,9 +30,6 @@
 | Projeto | Descrição |
 |--------|-----------|
 | 🎵 **Bot Discord RafaelNeon** | Bot completo com música, economia, cogs customizáveis e painel gráfico |
-| 🛒 **Marketplace PHP** | Loja com suporte a JSON, painel admin, sistema de login e produtos dinâmicos |
-| 🤖 **Chat IA Integrado** | Interface web com modelos LLM (GPT, Mistral, DeepSeek), memória e histórico |
-| 🧭 **Dashboard Neon** | Painel CustomTkinter com logs ao vivo, cogs ativáveis, estatísticas e gerenciamento de arquivos |
 
 ---
 
