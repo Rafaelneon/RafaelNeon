@@ -1,12 +1,11 @@
-// Ativar animação apenas quando o elemento estiver visível
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('animated');
-    }
+function showTab(tabId) {
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.classList.remove('active');
   });
-}, { threshold: 0.1 });
+  document.getElementById(tabId).classList.add('active');
+}
 
-document.querySelectorAll('.fade-in').forEach(el => {
-  observer.observe(el);
-});
+function showTab(tabId) {
+  document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+  document.getElementById(tabId).classList.add('active');
+}
