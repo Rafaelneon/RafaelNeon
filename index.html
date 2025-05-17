@@ -1,45 +1,50 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RafaelNeon</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RafaelNeon</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1 class="fade-in">Olá, eu sou <span class="highlight">Rafael9819</span></h1>
-    <p class="fade-in delay1">Desevolvedor de possiveis soluções, maximizar alguns processos que tem uma demada de usuario.</p>
-    <a href="#projetos" class="btn fade-in delay2">Ver Projetos</a>
-  </header>
+    <header class="navbar">
+        <div class="logo">RafaelNeon</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showTab('inicio')">Início</a></li>
+                <li><a href="#" onclick="showTab('sobre')">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <section id="projetos">
-    <h2>Meus Projetos</h2>
-    <div class="projetos-container">
-      <div class="projeto-card fade-in">
-        <h3>Bot Discord</h3>
-        <p>Um bot completo com economia, música e IA.</p>
-        <a href="#">Ver mais</a>
-      </div>
-      <div class="projeto-card fade-in delay1">
-        <h3>Site de Vendas</h3>
-        <p>Marketplace feito com PHP, JSON e login seguro.</p>
-        <a href="#">Ver mais</a>
-      </div>
-      <!-- Adicione mais cards -->
-    </div>
-  </section>
+  <main>
+    <section id="inicio" class="tab active">
+        <div class="welcome-container">
+            <h1>Bem-vindo à  Rafaelneon</h1>
+            <p>Somos uma nova rede focada na criação de bots para Discord.
+Nosso objetivo é facilitar o desenvolvimento, oferecendo uma base organizada e flexível. Ideal para desenvolvedores e aspirantes que querem participar, criar, personalizar e evoluir seus próprios bots de forma prática e eficiente</p>
+            
+            <a href="#" onclick="showTab('bot-discord')" class="btn">Bot Discord</a>
+        </div>
+    </section>
 
-  <section id="contato" class="fade-in">
-    <h2>Contato</h2>
-    <p>Email: seuemail@exemplo.com</p>
-    <p>Discord: @seunome</p>
-  </section>
+    <section id="sobre" class="tab">
+        <div class="about">
+            <h1>Sobre nos</h1>
+            <p>Se você chegou até aqui e tem interesse em participar do nosso projeto, junte-se ao nosso servidor no Discord! Estamos sempre abertos a novos colaboradores, seja você iniciante ou experiente.</p>
+            <a href="https://discord.gg/JFcHwFKKSg" target="_blank" class="discord-button">Entra agora</a>
+        </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 SeuNome. Todos os direitos reservados.</p>
-  </footer>
+    <section id="bot-discord" class="tab">
+        <div class="bot">
+            <h1>Bot Discord</h1>
+            <p>Estamos criando alguns que ja existem e um bot discord, oq diferencia eles do outros, muitos sabem que bot e uma coisas boa para personalizar o seu servidor e acrencentar muitas coisas, o porem que muitos bot tem limitações que so libera no plano ou se paga para liberar, a gente que inovar com fornecimento de base de bot pre-feita de modo que seja facil manunteção, organização, adições de novos e adicionar novos recursos a ideia em geral e um bot profissional porem mais pratico para que quer ter seu bot para usalos.  </p>
+        </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
