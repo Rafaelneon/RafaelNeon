@@ -99,13 +99,16 @@ body {
 }
 
 .btn {
-  background-color: #8a2be2;
-  padding: 12px 25px;
-  border-radius: 25px;
-  color: rgb(255, 255, 255);
-  text-shadow: 0 0 10px #00000080;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #5865F2; /* cor padrão do Discord */
+  color: white;
   text-decoration: none;
-  transition: backgroud 0.3s;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
 
 .about a.discord-button {
