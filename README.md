@@ -1,192 +1,53 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RafaelNeon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">RafaelNeon</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showTab('inicio')">Início</a></li>
+                <li><a href="#" onclick="showTab('sobre')">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
 
-body {
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(135deg, #1e1e2f,#0f061f);
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  <main>
+    <section id="inicio" class="tab active">
+        <div class="welcome-container">
+            <h1>Bem-vindo à  Rafaelneon</h1>
+            <p>Somos uma nova rede focada na criação de bots para Discord.
+Nosso objetivo é facilitar o desenvolvimento, oferecendo uma base organizada e flexível. Ideal para desenvolvedores e aspirantes que querem participar, criar, personalizar e evoluir seus próprios bots de forma prática e eficiente</p>
+            
+            <a href="#" onclick="showTab('bot-discord')" class="btn">Bot Discord</a>
+        </div>
+    </section>
 
-.welcome-container {
-  max-width: 900px;
-  margin: 100px auto;
-  padding: 40px 30px;
-  backdrop-filter: blur(6px);
-  color: #f1f1f1;
-  font-family: 'Segoe UI', sans-serif;
-  text-align: center;
-  background: #1e1e2f;
-  color: #ffffff;
-  border-radius: 10px;
-}
+    <section id="sobre" class="tab">
+        <div class="about">
+            <h1>Sobre nos</h1>
+            <p>Se você chegou até aqui e tem interesse em participar do nosso projeto, junte-se ao nosso servidor no Discord! Estamos sempre abertos a novos colaboradores, seja você iniciante ou experiente.</p>
+            <a href="https://discord.gg/JFcHwFKKSg" target="_blank" class="discord-button">Entra agora</a>
+        </div>
+    </section>
 
-.welcome-container h1 {
-  font-size: 3rem;
-  color: #a362ff;
-  margin-bottom: 20px;
-  text-align: left;
-  text-shadow: 0 0 10px #a362ff80;
-}
+    <section id="bot-discord" class="tab">
+        <div class="bot">
+            <h1>Bot Discord</h1>
+            <p>Estamos criando alguns que ja existem e um bot discord, oq diferencia eles do outros, muitos sabem que bot e uma coisas boa para personalizar o seu servidor e acrencentar muitas coisas, o porem que muitos bot tem limitações que so libera no plano ou se paga para liberar, a gente que inovar com fornecimento de base de bot pre-feita de modo que seja facil manunteção, organização, adições de novos e adicionar novos recursos a ideia em geral e um bot profissional porem mais pratico para que quer ter seu bot para usalos.  </p>
+        </div>
+    </section>
 
-.welcome-container p {
-  font-size: 1.2rem;
-  line-height: 1.5;
-  color: #dddddd;
-  text-align: justify;
-}
+  </main>
 
-.bot {
-  max-width: 900px;
-  margin: 100px auto;
-  padding: 40px 30px;
-  backdrop-filter: blur(6px);
-  color: #f1f1f1;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.bot h1 {
-  font-size: 3rem;
-  color: #a362ff;
-  margin-bottom: 20px;
-  text-align: left;
-  text-shadow: 0 0 10px #a362ff80;
-}
-
-.bot p {
-  font-size: 1.2rem;
-  line-height: 1.5;
-  color: #dddddd;
-  text-align: justify;
-}
-
-.about {
-  max-width: 900px;
-  margin: 100px auto;
-  padding: 40px 30px;
-  backdrop-filter: blur(6px);
-  color: #f1f1f1;
-  font-family: 'Segoe UI', sans-serif;
-  text-align: center;
-  background: #1e1e2f;
-  color: #ffffff;
-}
-
-.about p {
-  font-size: 1.2rem;
-  line-height: 1.5;
-  color: #dddddd;
-  text-align: justify;
-}
-.about h1 {
-  font-size: 3rem;
-  color: #a362ff;
-  margin-bottom: 20px;
-  text-align: left;
-  text-shadow: 0 0 10px #a362ff80;
-} 
-
-.about a {
-  color: #8a2be2;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.btn {
-  background-color: #8a2be2;
-  padding: 12px 25px;
-  border-radius: 25px;
-  color: rgb(255, 255, 255);
-  text-shadow: 0 0 10px #00000080;
-  text-decoration: none;
-  transition: backgroud 0.3s;
-}
-
-.about a.discord-button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  background-color: #5865F2; /* cor padrão do Discord */
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-
-.btn:hover {
-  background-color: #6a1bb7;
-}
-
-/* Seção abaixo da tela de entrada */
-section#principal {
-  padding: 50px;
-  background-color: #1e1e2f;
-  min-height: 100vh;
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 60px;
-  background: linear-gradient(135deg, #130b25,#080116);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 30px;
-  z-index: 10;
-}
-
-.logo {
-  font-size: 1.5rem;
-  color: rgb(147, 64, 243);
-  text-shadow: 0 0 10px #a362ff80;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: rgb(147, 64, 243);
-  text-shadow: 0 0 10px #a362ff80;
-  transition: color 0.3s;
-}
-
-.nav-links li a:hover {
-  color: #b974ff;
-}
-
-main {
-  position: absolute;
-  top: 60px;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.tab {
-  display: none;
-  text-align: center;
-}
-
-.tab.active {
-  display: block;
-}
+  <script src="script.js"></script>
+</body>
+</html>
 
 <h1 align="center">👾 Rafaelneon</h1>
 <p align="center">Desenvolvedor apaixonado por automações, bots, sistemas e econômicos 💻</p>
