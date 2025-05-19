@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RafaelNeon</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
     <header class="navbar">
@@ -12,6 +12,7 @@
         <nav>
             <ul class="nav-links">
                 <li><a href="#" onclick="showTab('inicio')">Início</a></li>
+                <li><a href="#" onclick="showTab('repository')">repository</a></li>
                 <li><a href="#" onclick="showTab('sobre')">Sobre</a></li>
             </ul>
         </nav>
@@ -24,6 +25,9 @@
                 <p>Somos uma nova rede focada na criação de bots para Discord. Nosso objetivo é facilitar o desenvolvimento, oferecendo uma base organizada e flexível. Ideal para desenvolvedores e aspirantes que querem participar, criar, personalizar e evoluir seus próprios bots de forma prática e eficiente</p>
                 <a href="#" onclick="showTab('bot-discord')" class="btn">Bot Discord</a>
             </div>
+            <footer class="footer">
+                <p>&copy; <?= date('Y') ?> RafaelNeon. Todos os direitos reservados.</p>
+            </footer>
         </section>
 
         <section id="sobre" class="tab">
@@ -32,16 +36,49 @@
                 <p>Se você chegou até aqui e tem interesse em participar do nosso projeto, junte-se ao nosso servidor no Discord! Estamos sempre abertos a novos colaboradores, seja você iniciante ou experiente.</p>
                 <a href="https://discord.gg/JFcHwFKKSg" target="_blank" class="discord-button">Entra agora</a>
             </div>
+            <footer class="footer">
+                <p>&copy; <?= date('Y') ?> RafaelNeon. Todos os direitos reservados.</p>
+            </footer>
         </section>
 
         <section id="bot-discord" class="tab">
             <div class="bot">
                 <h1>Bot Discord</h1>
-                <p>Estamos criando alguns que ja existem e um bot discord, oq diferencia eles do outros, muitos sabem que bot e uma coisas boa para personalizar o seu servidor e acrencentar muitas coisas, o porem que muitos bot tem limitações que so libera no plano ou se paga para liberar, a gente que inovar com fornecimento de base de bot pre-feita de modo que seja facil manunteção, organização, adições de novos e adicionar novos recursos a ideia em geral e um bot profissional porem mais pratico para que quer ter seu bot para usalos.  </p>
+                <p>Estamos criando alguns que ja existem e um bot discord, oq diferencia eles do outros, muitos sabem que bot e uma coisas boa para personalizar o seu servidor e acrencentar muitas coisas, o porem que muitos bot tem limitações que so libera no plano ou se paga para liberar, a gente que inovar com fornecimento de base de bot pre-feita de modo que seja facil manunteção, organização, adições de novos e adicionar novos recursos a ideia em geral e um bot profissional porem mais pratico para que quer ter seu bot para usalos.</p>
             </div>
+        <footer class="footer">
+            <p>&copy; <?= date('Y') ?> RafaelNeon. Todos os direitos reservados.</p>
+        </footer>
         </section>
+        
+        <section id="repository" class="tab">
+    <div class="repository">
+        <h1>Repositórios disponíveis</h1>
+        <p>Aqui estão todos os meus projetos.</p>
+        <div class="repo-list">
+            <div class="repo-card">
+                <h3>Bot discord python</h3>
+                <p>Bot base Discord para fazer seu bot único!</p>
+                <li>carregamento de cogs automatico</li>
+                <li>token bot --> .env</li>
+                <li>funçao --> utils</li>
+                <li>banco de dados --> data</li>
+                <a href="https://github.com/Rafaelneon/Python-bot-Discord" target="_blank" class="btn">Ver Repositório</a>
+            </div>
+            <div class="repo-card">
+                <h3>indisponível</h3>
+                <p>para futuros projetos</p>
+                <a href="#" target="_blank" class="btn">indisponível</a>
+            </div>
+            <!-- Adicione mais projetos aqui -->
+        </div>
+        <footer class="footer">
+            <p>&copy; <?= date('Y') ?> RafaelNeon. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</section>
     </main>
     
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
