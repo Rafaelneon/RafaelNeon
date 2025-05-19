@@ -7,11 +7,12 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #1e1e2f,#0f061f);
+  background: linear-gradient(135deg, #1e1e2f, #0f061f);
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  font-family: 'Segoe UI', sans-serif;
+  padding-bottom: 80px; /* espaço para o footer fixo */
 }
 
 .welcome-container {
@@ -98,6 +99,64 @@ body {
   font-weight: bold;
 }
 
+.repository h1 {
+  item-align: center;
+  margin-bottom: 20px;
+  font-size: 3rem;
+  color: #a362ff;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 0 0 10px #a362ff80;
+}
+.repository p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #dddddd;
+  text-align: center;
+}
+
+.repo-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.repo-card {
+  background-color: #2a1d3a;
+  border: 1px solid #3c2a5a;
+  padding: 20px;
+  border-radius: 12px;
+  width: 280px;
+  box-shadow: 0 0 10px rgba(163, 98, 255, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.repo-card h3 {
+  color: #a362ff;
+  margin-bottom: 10px;
+}
+
+.repo-card p {
+  color: #dddddd;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+.repo-card li {
+  color: #dddddd;
+  text-align:left;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.repo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(163, 98, 255, 0.3);
+}
+
 .btn {
   display: inline-block;
   margin-top: 20px;
@@ -123,7 +182,6 @@ body {
   font-weight: bold;
   transition: background 0.3s ease;
 }
-
 
 .btn:hover {
   background-color: #6a1bb7;
@@ -180,13 +238,69 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 100px; /* Adicionado para evitar sobreposição da navbar */
 }
 
 .tab {
   display: none;
   text-align: center;
+  padding-top: 100px; /* Garante que o conteúdo não fique embaixo da navbar */
 }
 
 .tab.active {
   display: block;
+}
+/* Animação de entrada da navbar */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.navbar {
+  animation: slideDown 0.8s ease-out;
+  box-shadow: 0 4px 12px rgba(163, 98, 255, 0.2);
+  transition: background 0.4s ease;
+}
+
+/* Animação ao passar o mouse nos links */
+.nav-links li a {
+  position: relative;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #b974ff;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* RODAPÉ */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(135deg, #1c0033, #2a004d);
+  color: #b88eff;
+  text-align: center;
+  padding: 1rem 20px;
+  font-size: 0.9rem;
+  font-family: 'Segoe UI', sans-serif;
+  z-index: 100;
+  box-shadow: 0 -2px 12px rgba(163, 98, 255, 0.2);
+  border-top: 1px solid #3c2a5a;
 }
