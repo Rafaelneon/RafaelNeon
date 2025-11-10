@@ -1,84 +1,298 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RafaelNeon</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Rafaelneon - Hub de Projetos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">RafaelNeon</div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#" onclick="showTab('inicio')">Início</a></li>
-                <li><a href="#" onclick="showTab('repository')">repository</a></li>
-                <li><a href="#" onclick="showTab('sobre')">Sobre</a></li>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <i class="fas fa-cube"></i>
+                <span>Rafaelneon</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                <li><a href="#changelog" class="nav-link">Changelog</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
             </ul>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <section id="inicio" class="tab active">
-            <div class="welcome-container">
-                <h1>Bem-vindo à  Rafaelneon</h1>
-                <p>Somos uma nova rede focada na criação de bots para Discord. Nosso objetivo é facilitar o desenvolvimento, oferecendo uma base organizada e flexível. Ideal para desenvolvedores e aspirantes que querem participar, criar, personalizar e evoluir seus próprios bots de forma prática e eficiente</p>
-                <a href="#" onclick="showTab('bot-discord')" class="btn">Bot Discord</a>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Bem-vindo ao Rafaelneon</h1>
+            <p class="hero-subtitle">Hub de projetos focados em segurança e comunidade</p>
+            <div class="hero-buttons">
+                <a href="#projetos" class="btn btn-primary">
+                    <span>Ver Projetos</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#sobre" class="btn btn-secondary">
+                    <span>Saiba Mais</span>
+                    <i class="fas fa-info-circle"></i>
+                </a>
             </div>
-            <footer class="footer">
-                <p>&copy; 2025 RafaelNeon. Todos os direitos reservados.</p>
-            </footer>
-        </section>
-
-        <section id="sobre" class="tab">
-            <div class="about">
-                <h1>Sobre nos</h1>
-                <p>Se você chegou até aqui e tem interesse em participar do nosso projeto, junte-se ao nosso servidor no Discord! Estamos sempre abertos a novos colaboradores, seja você iniciante ou experiente.</p>
-                <a href="https://discord.gg/JFcHwFKKSg" target="_blank" class="discord-button">Entra agora</a>
-            </div>
-            <footer class="footer">
-                <p>&copy; 2025 RafaelNeon. Todos os direitos reservados.</p>
-            </footer>
-        </section>
-
-        <section id="bot-discord" class="tab">
-            <div class="bot">
-                <h1>Bot Discord</h1>
-                <p>Estamos criando alguns que ja existem e um bot discord, oq diferencia eles do outros, muitos sabem que bot e uma coisas boa para personalizar o seu servidor e acrencentar muitas coisas, o porem que muitos bot tem limitações que so libera no plano ou se paga para liberar, a gente que inovar com fornecimento de base de bot pre-feita de modo que seja facil manunteção, organização, adições de novos e adicionar novos recursos a ideia em geral e um bot profissional porem mais pratico para que quer ter seu bot para usalos.</p>
-            </div>
-        <footer class="footer">
-            <p>&copy; <?= date('Y') ?> RafaelNeon. Todos os direitos reservados.</p>
-        </footer>
-        </section>
-        
-        <section id="repository" class="tab">
-    <div class="repository">
-        <h1>Repositórios disponíveis</h1>
-        <p>Aqui estão todos os meus projetos.</p>
-        <div class="repo-list">
-            <div class="repo-card">
-                <h3>Bot discord python</h3>
-                <p>Bot base Discord para fazer seu bot único!</p>
-                <li>carregamento de cogs automatico</li>
-                <li>token bot --> .env</li>
-                <li>funçao --> utils</li>
-                <li>banco de dados --> data</li>
-                <a href="https://github.com/Rafaelneon/Python-bot-Discord" target="_blank" class="btn">Ver Repositório</a>
-            </div>
-            <div class="repo-card">
-                <h3>indisponível</h3>
-                <p>para futuros projetos</p>
-                <a href="#" target="_blank" class="btn">indisponível</a>
-            </div>
-            <!-- Adicione mais projetos aqui -->
         </div>
-        <footer class="footer">
-            <p>&copy; 2025 RafaelNeon. Todos os direitos reservados.</p>
-        </footer>
+        <div class="hero-image">
+            <i class="fas fa-shield-alt"></i>
+        </div>
+    </section>
+
+    <!-- Projetos Section -->
+    <section id="projetos" class="projetos">
+        <div class="container">
+            <h2 class="section-title">Nossos Projetos</h2>
+            <div class="projetos-grid">
+                
+                <!-- Minecraft Server -->
+                <div class="projeto-card">
+                    <div class="projeto-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>Servidor Minecraft</h3>
+                    <p>Servidor de sobrevivência com toque de semi-anarquia, livre de microtransações. Focado na experiência pura do jogo.</p>
+                    <div class="server-status" id="server-status">
+                        <div class="status-item">
+                            <span class="status-label">Status:</span>
+                            <span class="status-value" id="server-status-text">Carregando...</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">Jogadores:</span>
+                            <span class="status-value" id="server-players">--/--</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-label">Versão:</span>
+                            <span class="status-value" id="server-version">--</span>
+                        </div>
+                    </div>
+                    <div class="projeto-actions">
+                        <button class="btn btn-primary" onclick="copiarIP('survival.rafaelneon.site')">
+                            <i class="fas fa-copy"></i>
+                            <span>Copiar IP</span>
+                        </button>
+                        <button class="btn btn-secondary" onclick="mostrarInfo('minecraft')">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Info</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Discord Bot Comunidade -->
+                <div class="projeto-card">
+                    <div class="projeto-icon">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <h3>Bot Discord - Comunidade</h3>
+                    <p>Bot desenvolvido para uso próprio da comunidade Rafaelneon com comandos úteis e integrações específicas.</p>
+                    <div class="projeto-features">
+                        <span class="feature">Moderação</span>
+                        <span class="feature">Utilidades</span>
+                        <span class="feature">Diversão</span>
+                        <span class="feature">Custom</span>
+                    </div>
+                    <div class="projeto-actions">
+                        <button class="btn btn-secondary" onclick="mostrarInfo('bot-comunidade')">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Comandos</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Discord Bot Segurança -->
+                <div class="projeto-card">
+                    <div class="projeto-icon">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h3>Bot Discord - Segurança</h3>
+                    <p>Proteção contra hyperlinks maliciosos e futuramente contra arquivos perigosos. Segurança em primeiro lugar para a comunidade Rafaelneon.</p>
+                    <div class="projeto-features">
+                        <span class="feature">Anti-Phishing</span>
+                        <span class="feature">Scan de Links</span>
+                        <span class="feature">Proteção de Arquivos</span>
+                        <span class="feature">Logs</span>
+                    </div>
+                    <div class="projeto-actions">
+                        <button class="btn btn-secondary" onclick="mostrarInfo('bot-seguranca')">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Recursos</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Changelog Section -->
+    <section id="changelog" class="changelog">
+        <div class="container">
+            <h2 class="section-title">Changelog</h2>
+            <div class="changelog-container">
+                <div class="changelog-item">
+                    <div class="changelog-version">
+                        <span class="version-tag">v2.1.0</span>
+                        <span class="version-date">15 Nov 2025</span>
+                    </div>
+                    <div class="changelog-content">
+                        <h4>Novos Recursos</h4>
+                        <ul>
+                            <li>✅ Adicionado sistema de proteção contra arquivos maliciosos</li>
+                            <li>✅ Melhorias no sistema de moderação do Discord</li>
+                            <li>✅ Novo comando !status no bot de comunidade</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="changelog-item">
+                    <div class="changelog-version">
+                        <span class="version-tag">v2.0.0</span>
+                        <span class="version-date">10 Nov 2025</span>
+                    </div>
+                    <div class="changelog-content">
+                        <h4>Atualização Principal</h4>
+                        <ul>
+                            <li>🚀 Servidor Minecraft atualizado para 1.21.10</li>
+                            <li>🚀 Novo sistema de templates para download</li>
+                            <li>🔧 Otimizações de performance</li>
+                            <li>🐛 Correções de bugs de segurança</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="changelog-item">
+                    <div class="changelog-version">
+                        <span class="version-tag">v1.5.2</span>
+                        <span class="version-date">5 Nov 2025</span>
+                    </div>
+                    <div class="changelog-content">
+                        <h4>Melhorias e Correções</h4>
+                        <ul>
+                            <li>✨ Melhorias na interface do bot de segurança</li>
+                            <li>🛡️ Reforço na proteção contra links suspeitos</li>
+                            <li>📊 Adicionado sistema de estatísticas do servidor</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2 class="section-title">Sobre o Rafaelneon</h2>
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <p>O Rafaelneon é um hub de projetos criado com o foco principal em proporcionar segurança e confiabilidade para comunidades online.</p>
+                    <p>Nossos projetos são desenvolvidos pensando na experiência do usuário, priorizando a segurança dos membros e a estabilidade dos serviços.</p>
+                    <p>Não temos foco em lucro no momento - nossa prioridade é construir uma comunidade forte e segura no Rafaelneon.</p>
+                </div>
+                <div class="sobre-stats">
+                    <div class="stat">
+                        <h3>3</h3>
+                        <p>Projetos Ativos</p>
+                    </div>
+                    <div class="stat">
+                        <h3>100+</h3>
+                        <p>Membros</p>
+                    </div>
+                    <div class="stat">
+                        <h3>24/7</h3>
+                        <p>Disponibilidade</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contato-content">
+                <div class="contato-info">
+                    <div class="info-item">
+                        <i class="fab fa-discord"></i>
+                        <span>Discord: Rafaelneon#0001</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email: contato@rafaelneon.site</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-globe"></i>
+                        <span>Website: rafaelneon.site</span>
+                    </div>
+                </div>
+                <form class="contato-form">
+                    <input type="text" placeholder="Seu Nome" required>
+                    <input type="email" placeholder="Seu Email" required>
+                    <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Enviar Mensagem</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Rafaelneon Hub. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="https://discord.gg/JFcHwFKKSg" target="_blank"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="mailto:contato@rafaelneon.site"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal para Templates -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Templates</h3>
+                <button class="modal-close" onclick="fecharModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Conteúdo dinâmico aqui -->
+            </div>
+        </div>
     </div>
-</section>
-    </main>
-    
+
+    <!-- Modal para Informações -->
+    <div id="info-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="info-modal-title">Informações</h3>
+                <button class="modal-close" onclick="fecharInfoModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="info-modal-body">
+                <!-- Conteúdo dinâmico aqui -->
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
